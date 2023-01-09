@@ -14,9 +14,11 @@ public class Day1 implements IDay{
         Integer calories;
         Integer maxCal=0;
         while ((line = br.readLine()) != null){
-            calories = Integer.parseInt(line);
-            if (calories > maxCal){
-                maxCal = calories;
+            if (line.trim()!=""){
+                calories = Integer.parseInt(line);
+                if (calories > maxCal){
+                    maxCal = calories;
+                }
             }
         }
         return Integer.toString(maxCal);
